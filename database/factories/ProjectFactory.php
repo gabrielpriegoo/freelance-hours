@@ -21,7 +21,7 @@ class ProjectFactory extends Factory
             'title' => collect(fake()->words(5))->join(' '),
             'description' => fake()->randomHtml(),
             'ends_at' => fake()->dateTimeBetween('now', '+ 3 year'),
-            'status' => fake()->randomElement(['open', 'closed']),
+            'status' => fake()->randomElement(['open', 'closed']), 
             'tech_stack' => fake()->randomElements(['laravel', 'php', 'javascript', 'react', 'vue', 'tailwind',], random_int(1, 5)),
             'created_by' => User::factory(),
         ];
