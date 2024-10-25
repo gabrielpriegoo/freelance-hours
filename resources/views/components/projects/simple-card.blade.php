@@ -1,7 +1,7 @@
 @props(['project'])
 <x-ui.card>
     <div class="flex items-start justify-between pb-4">
-        <div class="flex flex-col gap-[16px]">
+        <div class="flex flex-col gap-[16px] truncate">
             <div>
                 <x-projects.status :status="$project->status" />
 
@@ -35,7 +35,7 @@
             @endphp
 
             @foreach ($techStack as $tech)
-            <x-ui.tech :icon="$tech" :text="$tech" />
+            <x-ui.tech :icon=" $tech" :text="$tech" />
             @endforeach
         </div>
     </div>
